@@ -20,14 +20,14 @@
         <!-- Application Images -->
         <image:image>
             <image:loc>https://mic-cam.vercel.app/og-image.jpg</image:loc>
-            <image:caption>Mic & Camera Tester - Test your audio and video devices online</image:caption>
-            <image:title>Mic & Camera Tester</image:title>
+            <image:caption>Mic &amp; Camera Tester - Test your audio and video devices online</image:caption>
+            <image:title>Mic &amp; Camera Tester</image:title>
         </image:image>
         
         <image:image>
             <image:loc>https://mic-cam.vercel.app/screenshot.jpg</image:loc>
             <image:caption>Real-time microphone waveform visualization and camera preview</image:caption>
-            <image:title>Live Audio & Video Testing</image:title>
+            <image:title>Live Audio &amp; Video Testing</image:title>
         </image:image>
     </url>
     
