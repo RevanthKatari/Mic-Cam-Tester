@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Mic & Camera Tester - Test Your Audio & Video Devices Online Free</title>
+    <meta name="description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
+    <meta name="keywords" content="microphone test, camera test, mic test online, webcam test, audio test, video test, device test, browser test">
+    <meta name="author" content="Mic & Camera Tester">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mictester.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mictester.com">
+    <meta property="og:title" content="Mic & Camera Tester - Test Your Audio & Video Devices Online Free">
+    <meta property="og:description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
+    <meta property="og:image" content="https://mictester.com/og-image.jpg">
+    <meta property="og:site_name" content="Mic & Camera Tester">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mictester.com">
+    <meta property="twitter:title" content="Mic & Camera Tester - Test Your Audio & Video Devices Online Free">
+    <meta property="twitter:description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
+    <meta property="twitter:image" content="https://mictester.com/og-image.jpg">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Mic & Camera Tester">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎤%3C/text%3E%3C/svg%3E">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Mic & Camera Tester",
+        "url": "https://mictester.com",
+        "description": "Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Mic & Camera Tester"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 data-i18n="loading">Loading...</h2>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="icon">🎤📹</span>
+                    <span data-i18n="title">Mic & Camera Tester</span>
+                </h1>
+                <p class="subtitle" data-i18n="subtitle">Test your audio and video devices with real-time feedback</p>
+                
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Permission Status -->
+        <div class="permission-status" id="permission-status">
+            <div class="permission-item">
+                <span class="permission-icon" id="mic-permission-icon">⏳</span>
+                <span data-i18n="mic_permission">Microphone Access</span>
+                <span class="permission-text" id="mic-permission-text" data-i18n="checking">Checking...</span>
+            </div>
+            <div class="permission-item">
+                <span class="permission-icon" id="camera-permission-icon">⏳</span>
+                <span data-i18n="camera_permission">Camera Access</span>
+                <span class="permission-text" id="camera-permission-text" data-i18n="checking">Checking...</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Microphone Section -->
+            <section class="device-section microphone-section">
+                <div class="section-header">
+                    <h2>
+                        <span class="section-icon">🎤</span>
+                        <span data-i18n="microphone">Microphone</span>
+                    </h2>
+                </div>
+                
+                <div class="device-selector">
+                    <label for="microphone-select" data-i18n="select_microphone">Select Microphone:</label>
+                    <select id="microphone-select" class="device-select">
+                        <option value="" data-i18n="no_devices">No devices found</option>
+                    </select>
+                </div>
+
+                <div class="microphone-controls">
+                    <button id="mic-test-btn" class="test-button" data-i18n="start_test">Start Test</button>
+                    <div class="volume-indicator">
+                        <span data-i18n="volume">Volume:</span>
+                        <div class="volume-bar">
+                            <div class="volume-fill" id="volume-fill"></div>
+                        </div>
+                        <span id="volume-level">0%</span>
+                    </div>
+                </div>
+
+                <div class="visualizer-container">
+                    <canvas id="microphone-visualizer" class="visualizer"></canvas>
+                    <div class="visualizer-info">
+                        <span id="mic-info" data-i18n="select_mic_to_start">Select a microphone to start testing</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Camera Section -->
+            <section class="device-section camera-section">
+                <div class="section-header">
+                    <h2>
+                        <span class="section-icon">📹</span>
+                        <span data-i18n="camera">Camera</span>
+                    </h2>
+                </div>
+                
+                <div class="device-selector">
+                    <label for="camera-select" data-i18n="select_camera">Select Camera:</label>
+                    <select id="camera-select" class="device-select">
+                        <option value="" data-i18n="no_devices">No devices found</option>
+                    </select>
+                </div>
+
+                <div class="camera-controls">
+                    <button id="camera-test-btn" class="test-button" data-i18n="start_preview">Start Preview</button>
+                    <div class="resolution-info">
+                        <span data-i18n="resolution">Resolution:</span>
+                        <span id="resolution-display">--</span>
+                    </div>
+                </div>
+
+                <div class="camera-container">
+                    <video id="camera-preview" class="camera-preview" autoplay muted playsinline></video>
+                    <div class="camera-placeholder" id="camera-placeholder">
+                        <div class="placeholder-content">
+                            <span class="placeholder-icon">📹</span>
+                            <p data-i18n="select_camera_to_start">Select a camera to start preview</p>
+                        </div>
+                    </div>
+                    <div class="camera-info">
+                        <span id="camera-info">--</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Error Messages -->
+        <div class="error-container" id="error-container"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p data-i18n="privacy_note">Your audio and video data stays on your device - nothing is recorded or transmitted.</p>
+                <div class="footer-links">
+                    <span data-i18n="made_with">Made with ❤️ for privacy</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
