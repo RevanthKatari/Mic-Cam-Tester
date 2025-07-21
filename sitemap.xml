@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Main Page -->
+    <url>
+        <loc>https://mic-cam.vercel.app/</loc>
+        <lastmod>2025-07-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Alternate language versions -->
+        <xhtml:link rel="alternate" hreflang="en" href="https://mic-cam.vercel.app/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mic-cam.vercel.app/?lang=es" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://mic-cam.vercel.app/?lang=fr" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://mic-cam.vercel.app/?lang=de" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://mic-cam.vercel.app/" />
+        
+        <!-- Application Images -->
+        <image:image>
+            <image:loc>https://mic-cam.vercel.app/og-image.jpg</image:loc>
+            <image:caption>Mic & Camera Tester - Test your audio and video devices online</image:caption>
+            <image:title>Mic & Camera Tester</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://mic-cam.vercel.app/screenshot.jpg</image:loc>
+            <image:caption>Real-time microphone waveform visualization and camera preview</image:caption>
+            <image:title>Live Audio & Video Testing</image:title>
+        </image:image>
+    </url>
+    
+    <!-- PWA Manifest -->
+    <url>
+        <loc>https://mic-cam.vercel.app/manifest.json</loc>
+        <lastmod>2025-07-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Service Worker (if exists) -->
+    <url>
+        <loc>https://mic-cam.vercel.app/sw.js</loc>
+        <lastmod>2025-07-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    
+</urlset> 
