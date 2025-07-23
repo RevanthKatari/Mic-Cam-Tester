@@ -593,21 +593,183 @@ body {
 
 /* Footer */
 .footer {
-    margin-top: 48px;
+    margin-top: 60px;
+    padding: 40px 20px;
     text-align: center;
-    padding: 24px 0;
-    border-top: 1px solid var(--border);
-    animation: fadeInUp 0.8s ease-out 1s both;
+    background: linear-gradient(135deg, var(--bg-tertiary), rgba(102, 126, 234, 0.1));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: var(--card-shadow);
+    animation: fadeInUp 0.8s ease-out 1.4s both;
 }
 
 .footer-content {
-    color: var(--text-muted);
-    font-size: 0.875rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 20px;
+    opacity: 0.8;
 }
 
 .footer-links {
-    margin-top: 8px;
-    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links span {
+    opacity: 0.7;
+    font-size: 0.9em;
+}
+
+/* Content Sections for AdSense Compliance */
+.content-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+}
+
+.content-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.content-grid-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.content-item {
+    background: var(--bg-tertiary);
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.content-item h3 {
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.content-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-item li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.content-item li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-size: 0.8em;
+}
+
+.content-item p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* FAQ Styles */
+.faq-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: var(--bg-tertiary);
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.faq-item h3 {
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.faq-item p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Technical Content */
+.technical-content {
+    margin-top: 30px;
+}
+
+.technical-content h3 {
+    color: var(--accent-primary);
+    margin: 25px 0 15px 0;
+    font-size: 1.3em;
+}
+
+.technical-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tech-requirements {
+    margin-top: 30px;
+}
+
+.tech-requirements h3 {
+    color: var(--accent-primary);
+    margin: 25px 0 15px 0;
+    font-size: 1.3em;
+}
+
+.tech-requirements ul {
+    list-style: none;
+    padding: 0;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.tech-requirements li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.tech-requirements li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
 }
 
 /* Responsive Design */
@@ -621,6 +783,14 @@ body {
     .permission-status {
         grid-template-columns: 1fr;
         max-width: 400px;
+    }
+    
+    .content-grid-text {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-container {
+        padding: 25px;
     }
 }
 
@@ -656,6 +826,19 @@ body {
     
     .camera-preview {
         height: 220px;
+    }
+    
+    .content-section {
+        margin-top: 40px;
+        padding: 20px 16px;
+    }
+    
+    .content-container {
+        padding: 20px;
+    }
+    
+    .content-container h2 {
+        font-size: 1.6em;
     }
     
     .visualizer {
