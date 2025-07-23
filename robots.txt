@@ -54,10 +54,10 @@ Allow: /screenshot.jpg
 Allow: /google049897c31f0638a1.html
 
 # Sitemap location
-Sitemap: https://mic-cam.vercel.app/sitemap.xml
+Sitemap: https://cam-mic-tester.vercel.app/sitemap.xml
 
 # Crawl delay to be respectful of server resources
 Crawl-delay: 1
 
 # Host directive (helps with canonicalization)
-Host: https://mic-cam.vercel.app 
+Host: https://cam-mic-tester.vercel.app 

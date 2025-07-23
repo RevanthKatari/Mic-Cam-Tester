@@ -3,7 +3,7 @@
 A beautiful, privacy-focused web application for testing microphones and cameras with real-time feedback. No data leaves your device - everything runs locally in your browser.
 
 ## 🚀 **Live Demo**
-**👉 [https://mic-cam.vercel.app/](https://mic-cam.vercel.app/)**
+**👉 [https://cam-mic-tester.vercel.app/](https://cam-mic-tester.vercel.app/)**
 
 ![Mic Camera Tester](https://img.shields.io/badge/privacy-focused-green) ![Progressive Web App](https://img.shields.io/badge/PWA-enabled-blue) ![Mobile Friendly](https://img.shields.io/badge/mobile-friendly-brightgreen)
 
