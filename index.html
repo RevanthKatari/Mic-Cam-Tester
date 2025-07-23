@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Mic & Camera Tester - Test Your Audio & Video Devices Online Free</title>
-    <meta name="description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
-    <meta name="keywords" content="microphone test, camera test, mic test online, webcam test, audio test, video test, device test, browser test">
+    <title>Mic & Camera Tester - Test Your Audio & Video Devices Online Free | Complete Guide</title>
+    <meta name="description" content="Professional microphone and camera testing tool with real-time feedback. Includes comprehensive guides, troubleshooting tips, and compatibility information. Test your audio/video devices for free with our privacy-focused online tool.">
+    <meta name="keywords" content="microphone test, camera test, mic test online, webcam test, audio test, video test, device test, browser test, audio troubleshooting, camera troubleshooting, streaming setup, video conferencing, online meetings">
     <meta name="author" content="Mic & Camera Tester">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mic-cam.vercel.app/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta name="google-adsense-account" content="ca-pub-5456531892311284">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mic-cam.vercel.app/">
-    <meta property="og:title" content="Mic & Camera Tester - Test Your Audio & Video Devices Online Free">
-    <meta property="og:description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
+    <meta property="og:title" content="Mic & Camera Tester - Professional Audio & Video Device Testing Tool">
+    <meta property="og:description" content="Test your microphone and camera online for free. Includes comprehensive guides, troubleshooting tips, and real-time feedback. Perfect for streaming, video conferencing, and content creation.">
     <meta property="og:image" content="https://mic-cam.vercel.app/og-image.jpg">
     <meta property="og:site_name" content="Mic & Camera Tester">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mic-cam.vercel.app/">
-    <meta property="twitter:title" content="Mic & Camera Tester - Test Your Audio & Video Devices Online Free">
-    <meta property="twitter:description" content="Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection. Works on all devices with smooth UX.">
+    <meta property="twitter:title" content="Mic & Camera Tester - Professional Audio & Video Device Testing Tool">
+    <meta property="twitter:description" content="Test your microphone and camera online for free. Includes comprehensive guides, troubleshooting tips, and real-time feedback.">
     <meta property="twitter:image" content="https://mic-cam.vercel.app/og-image.jpg">
     
     <!-- PWA -->
@@ -45,7 +46,7 @@
         "@type": "WebApplication",
         "name": "Mic & Camera Tester",
         "url": "https://mic-cam.vercel.app/",
-        "description": "Test your microphone and camera online for free. Real-time audio visualization, camera preview, device selection.",
+        "description": "Professional microphone and camera testing tool with comprehensive guides and troubleshooting resources. Test your audio and video devices for free with real-time feedback.",
         "applicationCategory": "UtilityApplication",
         "operatingSystem": "Any",
         "offers": {
@@ -61,7 +62,15 @@
         "datePublished": "2025-07-21",
         "inLanguage": ["en", "es", "fr", "de"],
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "permissions": ["microphone", "camera"]
+        "permissions": ["microphone", "camera"],
+        "featureList": [
+            "Real-time microphone testing",
+            "Live camera preview",
+            "Audio visualization",
+            "Device compatibility check",
+            "Troubleshooting guides",
+            "Privacy-focused testing"
+        ]
     }
     </script>
     
@@ -76,123 +85,633 @@
         </div>
     </div>
 
+    <!-- Navigation -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">🎤📹</span>
+                <span class="nav-title">Mic & Camera Tester</span>
+            </div>
+            <div class="nav-links">
+                <a href="#tester" class="nav-link active" data-i18n="nav_tester">Tester</a>
+                <a href="#guide" class="nav-link" data-i18n="nav_guide">Guide</a>
+                <a href="#troubleshooting" class="nav-link" data-i18n="nav_troubleshooting">Help</a>
+                <a href="#compatibility" class="nav-link" data-i18n="nav_compatibility">Compatibility</a>
+                <a href="#blog" class="nav-link" data-i18n="nav_blog">Articles</a>
+            </div>
+            <button class="theme-toggle nav-theme-toggle" id="nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
     <!-- Main Container -->
     <main class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="main-title">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
                     <span class="icon">🎤📹</span>
-                    <span data-i18n="title">Mic & Camera Tester</span>
+                    <span data-i18n="title">Professional Mic & Camera Tester</span>
                 </h1>
-                <p class="subtitle" data-i18n="subtitle">Test your audio and video devices with real-time feedback</p>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Test your audio and video devices with real-time feedback, comprehensive guides, and expert troubleshooting tips. Perfect for streamers, content creators, and remote workers.</p>
                 
-                <!-- Dark Mode Toggle -->
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <span class="theme-icon">🌙</span>
-                </button>
-            </div>
-        </header>
-
-        <!-- Permission Status -->
-        <div class="permission-status" id="permission-status">
-            <div class="permission-item">
-                <span class="permission-icon" id="mic-permission-icon">⏳</span>
-                <span data-i18n="mic_permission">Microphone Access</span>
-                <span class="permission-text" id="mic-permission-text" data-i18n="checking">Checking...</span>
-            </div>
-            <div class="permission-item">
-                <span class="permission-icon" id="camera-permission-icon">⏳</span>
-                <span data-i18n="camera_permission">Camera Access</span>
-                <span class="permission-text" id="camera-permission-text" data-i18n="checking">Checking...</span>
-            </div>
-        </div>
-
-        <!-- Main Content Grid -->
-        <div class="content-grid">
-            <!-- Microphone Section -->
-            <section class="device-section microphone-section">
-                <div class="section-header">
-                    <h2>
-                        <span class="section-icon">🎤</span>
-                        <span data-i18n="microphone">Microphone</span>
-                    </h2>
-                </div>
-                
-                <div class="device-selector">
-                    <label for="microphone-select" data-i18n="select_microphone">Select Microphone:</label>
-                    <select id="microphone-select" class="device-select">
-                        <option value="" data-i18n="no_devices">No devices found</option>
-                    </select>
-                </div>
-
-                <div class="microphone-controls">
-                    <button id="mic-test-btn" class="test-button" data-i18n="start_test">Start Test</button>
-                    <div class="volume-indicator">
-                        <span data-i18n="volume">Volume:</span>
-                        <div class="volume-bar">
-                            <div class="volume-fill" id="volume-fill"></div>
-                        </div>
-                        <span id="volume-level">0%</span>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🔒</span>
+                        <span data-i18n="feature_privacy">100% Private</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span data-i18n="feature_realtime">Real-time Testing</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span data-i18n="feature_compatible">All Devices</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🆓</span>
+                        <span data-i18n="feature_free">Completely Free</span>
                     </div>
                 </div>
-
-                <div class="visualizer-container">
-                    <canvas id="microphone-visualizer" class="visualizer"></canvas>
-                    <div class="visualizer-info">
-                        <span id="mic-info" data-i18n="select_mic_to_start">Select a microphone to start testing</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Camera Section -->
-            <section class="device-section camera-section">
-                <div class="section-header">
-                    <h2>
-                        <span class="section-icon">📹</span>
-                        <span data-i18n="camera">Camera</span>
-                    </h2>
-                </div>
                 
-                <div class="device-selector">
-                    <label for="camera-select" data-i18n="select_camera">Select Camera:</label>
-                    <select id="camera-select" class="device-select">
-                        <option value="" data-i18n="no_devices">No devices found</option>
-                    </select>
+                <div class="hero-cta">
+                    <button class="cta-button primary" onclick="scrollToSection('tester')" data-i18n="cta_start_testing">Start Testing Now</button>
+                    <button class="cta-button secondary" onclick="scrollToSection('guide')" data-i18n="cta_learn_more">Learn More</button>
                 </div>
+            </div>
+        </section>
 
-                <div class="camera-controls">
-                    <button id="camera-test-btn" class="test-button" data-i18n="start_preview">Start Preview</button>
-                    <div class="resolution-info">
-                        <span data-i18n="resolution">Resolution:</span>
-                        <span id="resolution-display">--</span>
+        <!-- Tester Section -->
+        <section id="tester" class="tester-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="tester_title">Device Tester</h2>
+                <p class="section-description" data-i18n="tester_description">Test your microphone and camera devices with our professional-grade testing tool. Get real-time feedback and ensure your devices are working perfectly.</p>
+            </div>
+
+            <!-- Permission Status -->
+            <div class="permission-status" id="permission-status">
+                <div class="permission-item">
+                    <span class="permission-icon" id="mic-permission-icon">⏳</span>
+                    <span data-i18n="mic_permission">Microphone Access</span>
+                    <span class="permission-text" id="mic-permission-text" data-i18n="checking">Checking...</span>
+                </div>
+                <div class="permission-item">
+                    <span class="permission-icon" id="camera-permission-icon">⏳</span>
+                    <span data-i18n="camera_permission">Camera Access</span>
+                    <span class="permission-text" id="camera-permission-text" data-i18n="checking">Checking...</span>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Microphone Section -->
+                <section class="device-section microphone-section">
+                    <div class="section-header">
+                        <h3>
+                            <span class="section-icon">🎤</span>
+                            <span data-i18n="microphone">Microphone Testing</span>
+                        </h3>
+                        <p class="section-desc" data-i18n="mic_section_desc">Test your microphone's audio quality, volume levels, and device compatibility.</p>
                     </div>
-                </div>
+                    
+                    <div class="device-selector">
+                        <label for="microphone-select" data-i18n="select_microphone">Select Microphone:</label>
+                        <select id="microphone-select" class="device-select">
+                            <option value="" data-i18n="no_devices">No devices found</option>
+                        </select>
+                    </div>
 
-                <div class="camera-container">
-                    <video id="camera-preview" class="camera-preview" autoplay muted playsinline></video>
-                    <div class="camera-placeholder" id="camera-placeholder">
-                        <div class="placeholder-content">
-                            <span class="placeholder-icon">📹</span>
-                            <p data-i18n="select_camera_to_start">Select a camera to start preview</p>
+                    <div class="microphone-controls">
+                        <button id="mic-test-btn" class="test-button" data-i18n="start_test">Start Test</button>
+                        <div class="volume-indicator">
+                            <span data-i18n="volume">Volume:</span>
+                            <div class="volume-bar">
+                                <div class="volume-fill" id="volume-fill"></div>
+                            </div>
+                            <span id="volume-level">0%</span>
                         </div>
                     </div>
-                    <div class="camera-info">
-                        <span id="camera-info">--</span>
+
+                    <div class="visualizer-container">
+                        <canvas id="microphone-visualizer" class="visualizer"></canvas>
+                        <div class="visualizer-info">
+                            <span id="mic-info" data-i18n="select_mic_to_start">Select a microphone to start testing</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Camera Section -->
+                <section class="device-section camera-section">
+                    <div class="section-header">
+                        <h3>
+                            <span class="section-icon">📹</span>
+                            <span data-i18n="camera">Camera Testing</span>
+                        </h3>
+                        <p class="section-desc" data-i18n="camera_section_desc">Test your camera's video quality, resolution, and device functionality.</p>
+                    </div>
+                    
+                    <div class="device-selector">
+                        <label for="camera-select" data-i18n="select_camera">Select Camera:</label>
+                        <select id="camera-select" class="device-select">
+                            <option value="" data-i18n="no_devices">No devices found</option>
+                        </select>
+                    </div>
+
+                    <div class="camera-controls">
+                        <button id="camera-test-btn" class="test-button" data-i18n="start_preview">Start Preview</button>
+                        <div class="resolution-info">
+                            <span data-i18n="resolution">Resolution:</span>
+                            <span id="resolution-display">--</span>
+                        </div>
+                    </div>
+
+                    <div class="camera-container">
+                        <video id="camera-preview" class="camera-preview" autoplay muted playsinline></video>
+                        <div class="camera-placeholder" id="camera-placeholder">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📹</span>
+                                <p data-i18n="select_camera_to_start">Select a camera to start preview</p>
+                            </div>
+                        </div>
+                        <div class="camera-info">
+                            <span id="camera-info">--</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Error Messages -->
+            <div class="error-container" id="error-container"></div>
+        </section>
+
+        <!-- Comprehensive Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="guide_title">Complete Testing Guide</h2>
+                <p class="section-description" data-i18n="guide_description">Learn how to properly test your audio and video devices, understand the results, and optimize your setup for the best performance.</p>
+            </div>
+
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <div class="guide-icon">🎤</div>
+                    <h3 data-i18n="mic_guide_title">Microphone Testing Guide</h3>
+                    <div class="guide-content">
+                        <h4 data-i18n="mic_guide_setup">Setup Instructions:</h4>
+                        <ol>
+                            <li data-i18n="mic_step_1">Connect your microphone to your computer</li>
+                            <li data-i18n="mic_step_2">Select your microphone from the dropdown menu</li>
+                            <li data-i18n="mic_step_3">Click "Start Test" and allow microphone access</li>
+                            <li data-i18n="mic_step_4">Speak normally and observe the audio visualization</li>
+                            <li data-i18n="mic_step_5">Check the volume indicator for optimal levels (50-80%)</li>
+                        </ol>
+                        
+                        <h4 data-i18n="mic_guide_tips">Pro Tips:</h4>
+                        <ul>
+                            <li data-i18n="mic_tip_1">Position your microphone 6-8 inches from your mouth</li>
+                            <li data-i18n="mic_tip_2">Avoid background noise during testing</li>
+                            <li data-i18n="mic_tip_3">Test in a quiet environment for accurate results</li>
+                            <li data-i18n="mic_tip_4">Check for consistent waveform patterns</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <div class="guide-icon">📹</div>
+                    <h3 data-i18n="camera_guide_title">Camera Testing Guide</h3>
+                    <div class="guide-content">
+                        <h4 data-i18n="camera_guide_setup">Setup Instructions:</h4>
+                        <ol>
+                            <li data-i18n="camera_step_1">Connect your camera or ensure built-in camera is functional</li>
+                            <li data-i18n="camera_step_2">Select your camera from the dropdown menu</li>
+                            <li data-i18n="camera_step_3">Click "Start Preview" and allow camera access</li>
+                            <li data-i18n="camera_step_4">Check the video preview for clarity and color accuracy</li>
+                            <li data-i18n="camera_step_5">Verify the resolution display shows expected values</li>
+                        </ol>
+                        
+                        <h4 data-i18n="camera_guide_tips">Pro Tips:</h4>
+                        <ul>
+                            <li data-i18n="camera_tip_1">Ensure adequate lighting for best video quality</li>
+                            <li data-i18n="camera_tip_2">Clean your camera lens before testing</li>
+                            <li data-i18n="camera_tip_3">Test different resolutions if available</li>
+                            <li data-i18n="camera_tip_4">Check for smooth motion without lag</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <div class="guide-icon">⚙️</div>
+                    <h3 data-i18n="optimization_guide_title">Optimization Guide</h3>
+                    <div class="guide-content">
+                        <h4 data-i18n="optimization_audio">Audio Optimization:</h4>
+                        <ul>
+                            <li data-i18n="audio_opt_1">Adjust system volume to 70-80% for optimal input</li>
+                            <li data-i18n="audio_opt_2">Use noise cancellation if available</li>
+                            <li data-i18n="audio_opt_3">Position microphone away from speakers to avoid feedback</li>
+                            <li data-i18n="audio_opt_4">Consider using a pop filter for professional recording</li>
+                        </ul>
+                        
+                        <h4 data-i18n="optimization_video">Video Optimization:</h4>
+                        <ul>
+                            <li data-i18n="video_opt_1">Use natural lighting or ring lights for better visibility</li>
+                            <li data-i18n="video_opt_2">Position camera at eye level for professional appearance</li>
+                            <li data-i18n="video_opt_3">Ensure stable internet connection for streaming</li>
+                            <li data-i18n="video_opt_4">Close unnecessary applications to free up system resources</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section id="troubleshooting" class="troubleshooting-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="troubleshooting_title">Troubleshooting & FAQ</h2>
+                <p class="section-description" data-i18n="troubleshooting_description">Common issues and solutions to help you resolve audio and video device problems quickly and efficiently.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_no_mic_q">Why can't I see my microphone in the list?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_no_mic_a">This usually happens when:</p>
+                        <ul>
+                            <li data-i18n="faq_no_mic_a1">Your microphone is not properly connected</li>
+                            <li data-i18n="faq_no_mic_a2">Browser permissions are blocked</li>
+                            <li data-i18n="faq_no_mic_a3">Another application is using the microphone</li>
+                            <li data-i18n="faq_no_mic_a4">System audio drivers need updating</li>
+                        </ul>
+                        <p data-i18n="faq_no_mic_solution">Solution: Check connections, refresh the page, and allow microphone access when prompted.</p>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- Error Messages -->
-        <div class="error-container" id="error-container"></div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_no_camera_q">My camera shows a black screen, what's wrong?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_no_camera_a">Common causes include:</p>
+                        <ul>
+                            <li data-i18n="faq_no_camera_a1">Camera is being used by another application</li>
+                            <li data-i18n="faq_no_camera_a2">Privacy settings block camera access</li>
+                            <li data-i18n="faq_no_camera_a3">Camera drivers are outdated or corrupted</li>
+                            <li data-i18n="faq_no_camera_a4">Physical camera cover or switch is blocking the lens</li>
+                        </ul>
+                        <p data-i18n="faq_no_camera_solution">Solution: Close other apps using the camera, check privacy settings, and ensure the camera is not physically blocked.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_low_volume_q">Why is my microphone volume very low?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_low_volume_a">Low volume can be caused by:</p>
+                        <ul>
+                            <li data-i18n="faq_low_volume_a1">System microphone level set too low</li>
+                            <li data-i18n="faq_low_volume_a2">Microphone positioned too far from sound source</li>
+                            <li data-i18n="faq_low_volume_a3">Hardware gain settings need adjustment</li>
+                            <li data-i18n="faq_low_volume_a4">Microphone sensitivity settings in system preferences</li>
+                        </ul>
+                        <p data-i18n="faq_low_volume_solution">Solution: Adjust system microphone levels, move closer to the microphone, and check hardware gain controls.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_poor_quality_q">How can I improve my camera video quality?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_poor_quality_a">To improve video quality:</p>
+                        <ul>
+                            <li data-i18n="faq_poor_quality_a1">Ensure adequate lighting - natural light works best</li>
+                            <li data-i18n="faq_poor_quality_a2">Clean your camera lens with a soft cloth</li>
+                            <li data-i18n="faq_poor_quality_a3">Check if your camera supports higher resolutions</li>
+                            <li data-i18n="faq_poor_quality_a4">Close other applications to free up system resources</li>
+                            <li data-i18n="faq_poor_quality_a5">Update your camera drivers to the latest version</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_permissions_q">How do I allow microphone and camera permissions?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_permissions_a">To grant permissions:</p>
+                        <ul>
+                            <li data-i18n="faq_permissions_a1"><strong>Chrome/Edge:</strong> Click the camera/microphone icon in the address bar</li>
+                            <li data-i18n="faq_permissions_a2"><strong>Firefox:</strong> Click the shield icon and select "Allow"</li>
+                            <li data-i18n="faq_permissions_a3"><strong>Safari:</strong> Go to Safari > Preferences > Websites > Camera/Microphone</li>
+                            <li data-i18n="faq_permissions_a4">Always click "Allow" when prompted by the browser</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_multiple_devices_q">Can I test multiple devices at once?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_multiple_devices_a">Yes! You can test both your microphone and camera simultaneously. Simply:</p>
+                        <ul>
+                            <li data-i18n="faq_multiple_devices_a1">Select your desired microphone and start the audio test</li>
+                            <li data-i18n="faq_multiple_devices_a2">Then select your camera and start the video preview</li>
+                            <li data-i18n="faq_multiple_devices_a3">Both tests will run independently and provide real-time feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatibility Section -->
+        <section id="compatibility" class="compatibility-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="compatibility_title">Browser & Device Compatibility</h2>
+                <p class="section-description" data-i18n="compatibility_description">Comprehensive compatibility information for different browsers, operating systems, and device types.</p>
+            </div>
+
+            <div class="compatibility-grid">
+                <div class="compatibility-card">
+                    <h3 data-i18n="browser_compatibility">Browser Support</h3>
+                    <div class="compatibility-list">
+                        <div class="compatibility-item supported">
+                            <span class="browser-icon">🌐</span>
+                            <div class="browser-info">
+                                <strong>Chrome 60+</strong>
+                                <span class="support-status" data-i18n="fully_supported">Fully Supported</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="browser-icon">🦊</span>
+                            <div class="browser-info">
+                                <strong>Firefox 55+</strong>
+                                <span class="support-status" data-i18n="fully_supported">Fully Supported</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="browser-icon">🧭</span>
+                            <div class="browser-info">
+                                <strong>Safari 11+</strong>
+                                <span class="support-status" data-i18n="fully_supported">Fully Supported</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="browser-icon">⚡</span>
+                            <div class="browser-info">
+                                <strong>Edge 79+</strong>
+                                <span class="support-status" data-i18n="fully_supported">Fully Supported</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compatibility-card">
+                    <h3 data-i18n="os_compatibility">Operating System Support</h3>
+                    <div class="compatibility-list">
+                        <div class="compatibility-item supported">
+                            <span class="os-icon">🪟</span>
+                            <div class="browser-info">
+                                <strong>Windows 10/11</strong>
+                                <span class="support-status" data-i18n="excellent">Excellent</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="os-icon">🍎</span>
+                            <div class="browser-info">
+                                <strong>macOS 10.14+</strong>
+                                <span class="support-status" data-i18n="excellent">Excellent</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="os-icon">🐧</span>
+                            <div class="browser-info">
+                                <strong>Linux (Ubuntu, Fedora)</strong>
+                                <span class="support-status" data-i18n="good">Good</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="os-icon">📱</span>
+                            <div class="browser-info">
+                                <strong>Android 7+</strong>
+                                <span class="support-status" data-i18n="good">Good</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="os-icon">📱</span>
+                            <div class="browser-info">
+                                <strong>iOS 14.3+</strong>
+                                <span class="support-status" data-i18n="good">Good</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compatibility-card">
+                    <h3 data-i18n="device_compatibility">Device Types</h3>
+                    <div class="compatibility-list">
+                        <div class="compatibility-item supported">
+                            <span class="device-icon">💻</span>
+                            <div class="browser-info">
+                                <strong data-i18n="desktop_computers">Desktop Computers</strong>
+                                <span class="support-status" data-i18n="optimal">Optimal</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="device-icon">💻</span>
+                            <div class="browser-info">
+                                <strong data-i18n="laptops">Laptops</strong>
+                                <span class="support-status" data-i18n="optimal">Optimal</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item supported">
+                            <span class="device-icon">📱</span>
+                            <div class="browser-info">
+                                <strong data-i18n="tablets">Tablets</strong>
+                                <span class="support-status" data-i18n="good">Good</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-item limited">
+                            <span class="device-icon">📱</span>
+                            <div class="browser-info">
+                                <strong data-i18n="smartphones">Smartphones</strong>
+                                <span class="support-status" data-i18n="limited">Limited</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirements-section">
+                <h3 data-i18n="system_requirements">System Requirements</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4 data-i18n="minimum_requirements">Minimum Requirements</h4>
+                        <ul>
+                            <li data-i18n="req_browser">Modern web browser with WebRTC support</li>
+                            <li data-i18n="req_js">JavaScript enabled</li>
+                            <li data-i18n="req_connection">Stable internet connection</li>
+                            <li data-i18n="req_permissions">Microphone/camera permissions</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-item">
+                        <h4 data-i18n="recommended_requirements">Recommended</h4>
+                        <ul>
+                            <li data-i18n="rec_ram">4GB RAM or more</li>
+                            <li data-i18n="rec_cpu">Dual-core processor or better</li>
+                            <li data-i18n="rec_bandwidth">Broadband internet connection</li>
+                            <li data-i18n="rec_browser">Latest browser version</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog/Articles Section -->
+        <section id="blog" class="blog-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="blog_title">Expert Articles & Tips</h2>
+                <p class="section-description" data-i18n="blog_description">In-depth articles about audio and video technology, best practices, and industry insights to help you get the most out of your devices.</p>
+            </div>
+
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">🎙️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_1_title">The Complete Guide to Microphone Types and Their Uses</h3>
+                        <p class="article-excerpt" data-i18n="article_1_excerpt">Learn about different microphone types including dynamic, condenser, and ribbon mics. Understand which type works best for your specific needs, whether it's podcasting, streaming, or professional recording.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_1_date">December 15, 2024</span>
+                            <span class="article-readtime" data-i18n="article_1_readtime">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">📸</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_2_title">Camera Resolution Explained: 720p vs 1080p vs 4K</h3>
+                        <p class="article-excerpt" data-i18n="article_2_excerpt">Understanding camera resolutions and their impact on video quality. Learn when to use different resolutions for streaming, video conferencing, and content creation to optimize performance and bandwidth.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_2_date">December 12, 2024</span>
+                            <span class="article-readtime" data-i18n="article_2_readtime">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">🎬</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_3_title">Setting Up Your Home Studio: Audio and Video Best Practices</h3>
+                        <p class="article-excerpt" data-i18n="article_3_excerpt">Create a professional home studio setup with proper lighting, acoustics, and equipment positioning. Tips for content creators, remote workers, and anyone looking to improve their video call quality.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_3_date">December 10, 2024</span>
+                            <span class="article-readtime" data-i18n="article_3_readtime">12 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">🔧</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_4_title">Troubleshooting Common Audio and Video Issues</h3>
+                        <p class="article-excerpt" data-i18n="article_4_excerpt">Step-by-step solutions for the most common audio and video problems. From echo and feedback issues to poor video quality and device recognition problems.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_4_date">December 8, 2024</span>
+                            <span class="article-readtime" data-i18n="article_4_readtime">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">🌐</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_5_title">Browser Compatibility and Web Audio/Video APIs</h3>
+                        <p class="article-excerpt" data-i18n="article_5_excerpt">Technical deep-dive into WebRTC, getUserMedia API, and browser differences. Understanding how web browsers handle audio and video devices and what this means for users.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_5_date">December 5, 2024</span>
+                            <span class="article-readtime" data-i18n="article_5_readtime">15 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-icon">🔒</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 data-i18n="article_6_title">Privacy and Security in Online Audio/Video Testing</h3>
+                        <p class="article-excerpt" data-i18n="article_6_excerpt">Understanding privacy implications of browser-based media testing. Learn about data protection, local processing, and how to ensure your audio and video data stays secure.</p>
+                        <div class="article-meta">
+                            <span class="article-date" data-i18n="article_6_date">December 3, 2024</span>
+                            <span class="article-readtime" data-i18n="article_6_readtime">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p data-i18n="privacy_note">Your audio and video data stays on your device - nothing is recorded or transmitted.</p>
-                <div class="footer-links">
-                    <span data-i18n="made_with">Made with ❤️ for privacy</span>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>🎤📹 Mic & Camera Tester</h3>
+                        <p data-i18n="footer_description">Professional audio and video device testing tool with comprehensive guides and expert support. Test your devices with confidence.</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4 data-i18n="footer_tools">Tools</h4>
+                            <ul>
+                                <li><a href="#tester" data-i18n="footer_microphone_test">Microphone Test</a></li>
+                                <li><a href="#tester" data-i18n="footer_camera_test">Camera Test</a></li>
+                                <li><a href="#guide" data-i18n="footer_testing_guide">Testing Guide</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 data-i18n="footer_support">Support</h4>
+                            <ul>
+                                <li><a href="#troubleshooting" data-i18n="footer_troubleshooting">Troubleshooting</a></li>
+                                <li><a href="#compatibility" data-i18n="footer_compatibility">Compatibility</a></li>
+                                <li><a href="#blog" data-i18n="footer_articles">Articles</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 data-i18n="footer_resources">Resources</h4>
+                            <ul>
+                                <li><a href="#guide" data-i18n="footer_setup_guide">Setup Guide</a></li>
+                                <li><a href="#blog" data-i18n="footer_best_practices">Best Practices</a></li>
+                                <li><a href="#compatibility" data-i18n="footer_system_requirements">System Requirements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p data-i18n="privacy_note">Your audio and video data stays on your device - nothing is recorded or transmitted.</p>
+                    <p data-i18n="made_with">Made with ❤️ for privacy and user experience</p>
+                    <p class="copyright">© 2024 Mic & Camera Tester. All rights reserved.</p>
                 </div>
             </div>
         </footer>
