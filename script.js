@@ -321,9 +321,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         initializeTheme();
         initializeNavigation();
         initializeFAQ();
+        setupEventListeners();
         await checkPermissions();
         await loadDevices();
-        setupEventListeners();
         hideLoadingScreen();
     } catch (error) {
         console.error('Initialization error:', error);
@@ -335,8 +335,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Initialize DOM Elements
 function initializeElements() {
     elements.loadingScreen = document.getElementById('loading-screen');
-    elements.themeToggle = document.getElementById('theme-toggle');
-    elements.navThemeToggle = elements.themeToggle; // Same element used in nav
+    elements.themeToggle = document.getElementById('nav-theme-toggle');
+    elements.navThemeToggle = elements.themeToggle;
     elements.micSelect = document.getElementById('microphone-select');
     elements.cameraSelect = document.getElementById('camera-select');
     elements.micTestBtn = document.getElementById('mic-test-btn');
@@ -581,8 +581,27 @@ function updatePermissionStatus(type, state) {
 // Device Loading Functions
 async function loadDevices() {
     try {
-        const devices = await navigator.mediaDevices.enumerateDevices();
+        // First try to get devices without labels
+        let devices = await navigator.mediaDevices.enumerateDevices();
+        
+        // If no labels, try to get permission first
+        if (devices.length > 0 && !devices[0].label) {
+            try {
+                // Request temporary permission to get device labels
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+                stream.getTracks().forEach(track => track.stop());
+                // Re-enumerate devices to get labels
+                devices = await navigator.mediaDevices.enumerateDevices();
+            } catch (permError) {
+                console.log('Permission not granted, using devices without labels');
+            }
+        }
+        
         populateDeviceSelectors(devices);
+        
+        // Listen for device changes
+        navigator.mediaDevices.addEventListener('devicechange', loadDevices);
+        
     } catch (error) {
         console.error('Error loading devices:', error);
         showError(translations[currentLanguage].error_not_supported);
@@ -813,10 +832,13 @@ function startCameraTest() {
     elements.cameraPlaceholder.style.display = 'none';
     elements.cameraTestBtn.textContent = translations[currentLanguage].stop_preview;
     
-    // Update resolution display
-    const track = currentCameraStream.getVideoTracks()[0];
-    const settings = track.getSettings();
-    elements.resolutionDisplay.textContent = `${settings.width} × ${settings.height}`;
+    // Update resolution display when metadata is loaded
+    elements.cameraPreview.addEventListener('loadedmetadata', () => {
+        const track = currentCameraStream.getVideoTracks()[0];
+        const settings = track.getSettings();
+        elements.resolutionDisplay.textContent = `${settings.width} × ${settings.height}`;
+        elements.cameraInfo.textContent = `${settings.width} × ${settings.height} - ${elements.cameraSelect.selectedOptions[0].text}`;
+    });
 }
 
 function stopCameraTest() {
