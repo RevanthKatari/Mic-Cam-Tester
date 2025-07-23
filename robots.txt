@@ -1,10 +1,10 @@
+# Robots.txt for Mic & Camera Tester
+# Professional audio and video device testing tool
+
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://mic-cam.vercel.app/sitemap.xml
-
-# Allow all common web crawlers
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -20,6 +20,9 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
+User-agent: YandexBot
+Allow: /
+
 User-agent: facebookexternalhit
 Allow: /
 
@@ -29,16 +32,32 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: WhatsApp
-Allow: /
+# Block unnecessary crawlers that might waste resources
+User-agent: SemrushBot
+Disallow: /
 
-# Crawl-delay for respectful crawling
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Allow access to important files
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /ads.txt
+Allow: /og-image.jpg
+Allow: /screenshot.jpg
+Allow: /google049897c31f0638a1.html
+
+# Sitemap location
+Sitemap: https://mic-cam.vercel.app/sitemap.xml
+
+# Crawl delay to be respectful of server resources
 Crawl-delay: 1
 
-# Important pages for crawling
-Allow: /manifest.json
-Allow: /styles.css
-Allow: /script.js
-
-# Host directive
+# Host directive (helps with canonicalization)
 Host: https://mic-cam.vercel.app 
